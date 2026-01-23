@@ -11,7 +11,7 @@
 
 // ---------- DOMÁCA WiFi (musí mať internet) ----------
 const char* ssid = "ESP32_TEST";   
-const char* password = "Jp*850509";  
+const char* password = "12345678";  
 
 // ---------- Kolárovice ----------
 const float LAT = 49.2530;
@@ -41,7 +41,7 @@ void updateWeather() {
                "&longitude=" + String(LON, 4) + "&current_weather=true";
 
   WiFiClientSecure client;
-  client.setInsecure(); // zjednoduší HTTPS (na školský projekt OK)
+  client.setInsecure(); // zjednoduší HTTPS 
 
   HTTPClient http;
   http.begin(client, url);
